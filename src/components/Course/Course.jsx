@@ -9,7 +9,7 @@ const Course = ({course,handleAddCourse}) => {
 
 
     return (
-        <div className='shadow-lg m-5 px-3 py-5 w-80 space-y-3 bg-white rounded-xl'>
+        <div className='shadow-lg m-5 px-3 py-5 w-80 space-y-4 bg-white rounded-xl'>
             <img className='w-full' src={cover_img} alt="cover image" />
             <h2 className='text-lg font-bold'>{title}</h2>
             <p className='text-sm text-gray-600 '>{description}</p>
@@ -31,35 +31,10 @@ const Course = ({course,handleAddCourse}) => {
     );
 }
 
-// 'course.title','course.course_credit'
-{/* <button onClick={() => handleAddCourse(course)} className='text-center p-2 rounded-lg text-white bg-blue-600 w-full'>Select</button> */}
-
 Course.propTypes = {
     course: PropTypes.object,
     handleAddCourse: PropTypes.func
-    // handleAddCourse1: PropTypes.func,
-    // handleAddCourse2: PropTypes.func
 }
 export default Course;
 
-
-
-
-
-    //function Courses() {
-        // Define the first action
-        /* function handleAddCourse1() {
-          alert("Action 1");
-        } */
-      
-        // Define the second action
-        /* function handleAddCourse2() {
-          alert("Action 2");
-        } */
-      
-        // Define a combined click handler
-       /*  function handleAddCourse() {
-            handleAddCourse1(); // Call the first action
-            handleAddCourse2(); // Call the second action
-        } */
 
