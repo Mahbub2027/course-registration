@@ -3,6 +3,7 @@
 import './App.css'
 import Courses from './components/Courses/Courses'
 import Header from './components/Header/Header'
+// import '@sweetalert2/themes/dark/dark.scss';
 // import Registrations from './components/Registrations/Registrations'
 
 

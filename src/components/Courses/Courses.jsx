@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import Course from "../Course/Course";
 // import PropTypes from 'prop-types';
+// import Swal from "sweetalert2/src/sweetalert2.js";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Courses = () => {
 
@@ -32,13 +35,20 @@ const Courses = () => {
             const totalRemaining = 20 -count;
 
             if(count > 20){
-                return alert("No credit added")
+                // return alert("No credit added")
+                return toast.error(
+                    'Credit Limits: 20 hr ',{
+                        autoClose: false,
+                    }    
+                  )
             }
-            setRemaining(totalRemaining);
+            else{
+                setRemaining(totalRemaining);
             setTotalCredit(count);
 
             const newRegister = [...registration, register]
             setRegistration(newRegister)
+            }
         }
           
     }
@@ -74,8 +84,9 @@ const Courses = () => {
                     }
                 </div>
             </div>
-
+            <ToastContainer></ToastContainer>
         </div>
+        
                 
 
 
