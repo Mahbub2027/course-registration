@@ -9,7 +9,7 @@ const Course = ({course,handleAddCourse}) => {
 
 
     return (
-        <div className='shadow-xl m-5 px-3 py-5 w-80 space-y-3'>
+        <div className='shadow-lg m-5 px-3 py-5 w-80 space-y-3 bg-white rounded-xl'>
             <img className='w-full' src={cover_img} alt="cover image" />
             <h2 className='text-lg font-bold'>{title}</h2>
             <p className='text-sm text-gray-600 '>{description}</p>

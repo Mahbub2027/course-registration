@@ -20,7 +20,7 @@ const Courses = () => {
         let count = register.course_credit;
 
         if(isExist){
-            alert("already Enrolled")
+            alert("Already Enrolled")
           }
         else{
             registration.forEach((item) => {
@@ -30,6 +30,10 @@ const Courses = () => {
             //   console.log(count);
 
             const totalRemaining = 20 -count;
+
+            if(count > 20){
+                return alert("No credit added")
+            }
             setRemaining(totalRemaining);
             setTotalCredit(count);
 
@@ -43,16 +47,16 @@ const Courses = () => {
 
         <div className="flex flex-row-reverse">
             <div className="w-1/4 ml-20 mt-8">
-            <p>Total Remaining: {remaining}</p> <hr />
+            <p className="text-blue-600 font-bold mb-5">Credit Hour Remaining: {remaining}</p> <hr />
                     <h3 className="text-xl font-bold my-5">Course Name</h3>
-                <ul className="list-decimal"> 
+                <ul className="list-decimal text-gray-500 mb-5"> 
                     {
                         registration.map((register,idx) => <li key={idx}>{register.title}</li>)
                     }        
                 </ul>
                 <hr />
                 
-                <p>Total credit: {totalCredit}</p>
+                <p className="my-5">Total Credit Hour: {totalCredit}</p> <hr />
                 
             </div>
 
